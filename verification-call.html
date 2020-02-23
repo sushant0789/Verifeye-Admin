@@ -38,58 +38,63 @@
             </select>
           </div>
         </div>
-        <h2 class="title-h2">Document Confirmation</h2>
+        <div class="technical-check-flex">
+          <div class="technical-check">
+            <h2 class="title-h2">Technical Check</h2>
+            <label class="form-label"
+              >Lorem ipsum dolor sit amet, consectetur adipiscing acsd tincidunt
+              erat consectetur adipiscing ac tincidunt erat</label
+            >
+          </div>
+          <button type="button" class="input-button-check">
+            <i class="sprite sprite-check-video"></i>
+            Check Video
+          </button>
+          <button type="button" class="input-button-check">
+            <i class="sprite sprite-check-audio"></i>
+            Check Audio
+          </button>
+          <button type="button" class="input-button-check">
+            <i class="sprite sprite-check-mic"></i>
+            Check Microphone
+          </button>
+        </div>
         <div class="min-height-div">
           <div class="form-control">
-            <label class="form-label">Document Information</label>
+            <div class="information-head">
+              <input
+                type="button"
+                value="start verification call"
+                class="input-button-verification"
+              />
+            </div>
             <div class="information-flex-wrap">
               <div class="information-passport">
-                <div class="information-head">
-                  <h2 class="title-h2">Passport</h2>
-                  <input
-                    type="button"
-                    onclick="location.href = 'document.html';"
-                    value="Edit"
-                    class="input-button-edit"
-                  />
-                </div>
                 <div class="information-body">
                   <div class="info-image">
                     <div class="info-bg">
-                      <img
-                        src="img/information-passport.jpg"
-                        alt="information-passport"
-                      />
+                      <i class="sprite sprite-video-icon"></i>
                     </div>
-                    <span class="image-name">passport.jpg</span>
+                    <span class="image-name">YOU</span>
                   </div>
                 </div>
               </div>
               <div class="information-passport statement">
-                <div class="information-head">
-                  <h2 class="title-h2">Passport</h2>
-                  <input
-                    type="button"
-                    onclick="location.href = 'document.html';"
-                    value="Edit"
-                    class="input-button-edit"
-                  />
-                </div>
                 <div class="information-body">
                   <div class="info-image">
                     <div class="info-bg">
-                      <img
-                        src="img/information-statement.jpg"
-                        alt="information-statement"
-                      />
+                      <i class="sprite sprite-video-icon"></i>
                     </div>
-                    <span class="image-name">bank-statement.jpg</span>
+                    <span class="image-name">AGENT</span>
                   </div>
-                  <div class="info-address">
-                    <label class="form-label">Your Address</label>
-                    <p>
-                      Delhi, Jammy Socity, Near Subway house, India - 380054
-                    </p>
+                  <div class="online-agent">
+                    <div class="agent-live-icon">
+                      <i class="sprite sprite-agent-icon"></i>
+                    </div>
+                    <div class="agent-live-count">
+                      <label class="form-label">Online Agent</label>
+                      <div><span> 05</span> Agent</div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -99,15 +104,11 @@
         <div class="bottom-nav">
           <input
             type="button"
-            onclick="location.href = 'address.html';"
+            onclick="location.href = 'finish.html';"
             value="Back"
             class="input-button-back"
           />
-          <input
-            type="button"
-            value="Next"
-            class="input-button-next onclick-load"
-          />
+          <input type="button" value="Finish" class="input-button-next" />
         </div>
       </div>
     </main>
@@ -118,8 +119,8 @@
         <li class="is-complete"><span>Document</span></li>
         <li class="is-complete"><span>Selfie</span></li>
         <li class="is-complete"><span>Address</span></li>
-        <li class="is-active"><span>Confirmation</span></li>
-        <li><span>Finish</span></li>
+        <li class="is-complete"><span>Confirmation</span></li>
+        <li class="is-active"><span>Finish</span></li>
       </ol>
     </footer>
     <div class="modal-wrap">

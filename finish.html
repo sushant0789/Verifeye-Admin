@@ -14,11 +14,8 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
-    <link rel="stylesheet" href="dist/css/style.css?cb=1582217761538" />
-    <link
-      rel="stylesheet"
-      href="dist/css/intlTelInput.min.css?cb=1582217761538"
-    />
+    <link rel="stylesheet" href="css/style.css?cb=1582217761538" />
+    <link rel="stylesheet" href="css/intlTelInput.min.css?cb=1582217761538" />
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <![endif]-->
@@ -29,12 +26,7 @@
         <div class="head">
           <div class="logo">
             <a href="#" rel="noopener noreferrer">
-              <img
-                src="dist/img/verifeye-logo.svg"
-                alt="logo"
-                srcset=""
-                width="170"
-              />
+              <img src="img/verifeye-logo.svg" alt="logo" width="170" />
             </a>
           </div>
           <div class="language">
@@ -59,10 +51,150 @@
               </h3>
               <div class="info-image">
                 <div class="info-bg">
+                  <img src="img/reference-face.jpg" alt="reference-face" />
+                </div>
+              </div>
+            </div>
+            <div class="reference-face">
+              <h3 class="reference-h3">
+                Comparison Face
+              </h3>
+              <div class="info-image">
+                <div class="info-bg">
+                  <img src="img/comparison-face.jpg" alt="comparison-face" />
+                </div>
+              </div>
+            </div>
+            <div class="result-face">
+              <h3 class="reference-h3">
+                Result
+              </h3>
+              <div class="result-image-wrap">
+                <div class="result-image">
+                  <img src="img/result-face1.jpg" alt="result-face1" />
+                </div>
+                <div class="match-with"><span>=</span> Match with</div>
+                <div class="result-image">
+                  <img src="img/result-face2.jpg" alt="result-face2" />
+                </div>
+              </div>
+              <div class="result-text-wrap">
+                <h2>Match Found : 80%</h2>
+                <h4>Face Match SUCCESS!</h4>
+                <p>
+                  <span>Note :</span> This document did not pass in auto
+                  processing. All Documents are required to reach a socre of 80%
+                  or Higher to pass. We recommend to retry submit document as
+                  per giveen instruction.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="result-document-verification">
+            <h2 class="title-h2">Result : Document Verification</h2>
+            <label class="form-label">
+              Lorem ipsum dolor sit amet, consectetur adipiscing ac tincidunt
+              erat consectetur adipiscing ac tincidunt erat
+            </label>
+            <div class="result-doc-top">
+              <div class="form-control">
+                <label class="form-label">Document Address Type</label>
+                <div class="form-select-wrap">
+                  <select name="docWithPhoto">
+                    <option value="bankStatement" selected
+                      >Bank Statement</option
+                    >
+                    <option value="rentAgreement">Rental Agreement</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="result-doc-flex">
+              <div class="info-image">
+                <div class="info-bg">
                   <img
-                    src="dist/img/information-statement.jpg"
-                    alt="information-statement"
+                    src="img/information-statement.jpg"
+                    alt="reference-face"
                   />
+                </div>
+              </div>
+              <div class="result-content">
+                <ul class="result-ul">
+                  <li><span>ID :</span> 254856856</li>
+                  <li><span>File Name :</span> bank_Stat...jpeg</li>
+                  <li><span>File Size :</span> 118.43KB</li>
+                  <li><span>Added Date :</span> 12 Jan, 2020</li>
+                  <li>
+                    <span>Address :</span> Delhi, Jammy Socity, Near Subway
+                    house, India - 380054
+                  </li>
+                </ul>
+                <div class="edit-remove">
+                  <input
+                    type="button"
+                    onclick="location.href = 'confirmation.html';"
+                    value="Edit"
+                    class="input-button-edit"
+                  />
+                  <input
+                    type="button"
+                    value="Remove"
+                    class="input-button-remove"
+                  />
+                </div>
+              </div>
+              <div class="info-image">
+                <div class="success-bg">
+                  <i class="sprite sprite-success-icon"></i>
+                  <span>Your Docuemnt verified Successfull!</span>
+                </div>
+              </div>
+            </div>
+            <div class="result-doc-top">
+              <div class="form-control">
+                <label class="form-label">Document Photo Type</label>
+                <div class="form-select-wrap">
+                  <select name="">
+                    <option value="passport" selected>Passport</option>
+                    <option value="nationalId">National ID</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="result-doc-flex">
+              <div class="info-image">
+                <div class="info-bg">
+                  <img
+                    src="img/information-passport.jpg"
+                    alt="reference-face"
+                  />
+                </div>
+              </div>
+              <div class="result-content">
+                <ul class="result-ul">
+                  <li><span>ID :</span> 254856856</li>
+                  <li><span>File Name :</span> passport.jpeg</li>
+                  <li><span>File Size :</span> 118.43KB</li>
+                  <li><span>Added Date :</span> 12 Jan, 2020</li>
+                </ul>
+                <div class="edit-remove">
+                  <input
+                    type="button"
+                    onclick="location.href = 'confirmation.html';"
+                    value="Edit"
+                    class="input-button-edit"
+                  />
+                  <input
+                    type="button"
+                    value="Remove"
+                    class="input-button-remove"
+                  />
+                </div>
+              </div>
+              <div class="info-image">
+                <div class="success-bg">
+                  <i class="sprite sprite-success-icon"></i>
+                  <span>Your Docuemnt verified Successfull!</span>
                 </div>
               </div>
             </div>
@@ -77,8 +209,9 @@
           />
           <input
             type="button"
-            value="Next"
-            class="input-button-next onclick-load"
+            value="Finish"
+            onclick="location.href = 'verification-call.html';"
+            class="input-button-next"
           />
         </div>
       </div>
@@ -101,7 +234,7 @@
         <span>Verifying document...</span>
       </div>
     </div>
-    <script src="dist/js/jquery-3.4.1.min.js"></script>
-    <script src="dist/js/all.js?cb=1582217761538" async defer></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/all.js?cb=1582217761538" async defer></script>
   </body>
 </html>
