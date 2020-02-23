@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Verify Client</title>
+    <meta name="description" content="" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <link rel="stylesheet" href="dist/css/style.css?cb=1582217761538" />
+    <link
+      rel="stylesheet"
+      href="dist/css/intlTelInput.min.css?cb=1582217761538"
+    />
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="head">
+          <div class="logo">
+            <a href="#" rel="noopener noreferrer">
+              <img
+                src="dist/img/verifeye-logo.svg"
+                alt="logo"
+                srcset=""
+                width="170"
+              />
+            </a>
+          </div>
+          <div class="language">
+            <label class="language-label">Language</label>
+            <select class="select-box">
+              <option>English</option>
+              <option>Spanish</option>
+              <option>Chinese</option>
+            </select>
+          </div>
+        </div>
+        <h2 class="title-h2">Document Information</h2>
+        <div class="min-height-div">
+          <div class="width-50">
+            <div class="form-control">
+              <label class="form-label">Address in document</label>
+              <input
+                class="form-input"
+                name="InputDocument"
+                placeholder="Address..."
+                type="text"
+              />
+              <span class="supported-types"
+                >Address format: City, Address, Country, Postal code</span
+              >
+            </div>
+            <div class="form-control">
+              <label class="form-label">Document with your address</label>
+              <div class="form-select-wrap">
+                <select name="docWithPhoto">
+                  <option value="" id="idDocument" selected disabled
+                    >Document Type</option
+                  >
+                  <option value="bankStatement">Bank Statement</option>
+                  <option value="rentAgreement">Rental Agreement</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-control">
+              <label class="form-label">Upload Your Image</label>
+              <div class="file-upload">
+                <button
+                  class="file-upload-btn"
+                  type="button"
+                  onclick="$('.file-upload-input').trigger( 'click' )"
+                >
+                  <i class="sprite sprite-upload-icon"></i> Upload Images
+                </button>
+                <input
+                  class="file-upload-input"
+                  type="file"
+                  onchange="readURL(this);"
+                  accept="image/*"
+                />
+                <span class="supported-types"
+                  >Supported types: jpeg,png. Max size is 16MB</span
+                >
+                <label class="form-label">Preview of Documents</label>
+                <div class="file-upload-content">
+                  <div class="upload-img">
+                    <img
+                      class="file-upload-image"
+                      src="dist/img/upload-statement.jpg"
+                      alt="document image"
+                    />
+                  </div>
+                  <div class="image-title-wrap">
+                    <span class="image-title">bankstatement.jpeg</span>
+                    <button
+                      type="button"
+                      onclick="removeUpload()"
+                      class="remove-image"
+                    >
+                      <i class="sprite sprite-remove"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="width-50">
+            <p class="upload-image-instructions">
+              Please upload the images of chosen document. Make sure that the
+              uploaded images is are of acceptable quality.
+            </p>
+            <img
+              src="dist/img/upload-statement-quality.png"
+              alt="upload-images-quality"
+            />
+          </div>
+        </div>
+        <div class="bottom-nav">
+          <input
+            type="button"
+            onclick="location.href = 'selfie.html';"
+            value="Back"
+            class="input-button-back"
+          />
+          <input
+            type="button"
+            value="Next"
+            onclick="location.href = 'confirmation.html';"
+            class="input-button-next"
+          />
+        </div>
+      </div>
+    </main>
+    <footer>
+      <ol class="progress-bar">
+        <li class="is-complete"><span>Start</span></li>
+        <li class="is-complete"><span>Mobile</span></li>
+        <li class="is-complete"><span>Document</span></li>
+        <li class="is-complete"><span>Selfie</span></li>
+        <li class="is-active"><span>Address</span></li>
+        <li><span>Confirmation</span></li>
+        <li><span>Finish</span></li>
+      </ol>
+    </footer>
+    <script src="dist/js/jquery-3.4.1.min.js"></script>
+    <script src="dist/js/all.js?cb=1582217761538" async defer></script>
+  </body>
+</html>
