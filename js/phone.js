@@ -1,1 +1,1 @@
-var input=document.querySelector("#phone");var iti=intlTelInput(input,{initialCountry:"in",nationalMode:true,autoPlaceholder:"polite",utilsScript:"./js/utils.js"});window.iti=iti;
+var input=document.querySelector("#phone");var iti=intlTelInput(input,{initialCountry:"in",nationalMode:true,autoPlaceholder:"polite",utilsScript:"https://cdnjs.cloudflare.com/ajax/libs/javascript.util/0.12.12/javascript.util.min.js"});window.iti=iti;
