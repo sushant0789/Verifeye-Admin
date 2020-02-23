@@ -1,0 +1,1 @@
+var input=document.querySelector("#phone");var iti=intlTelInput(input,{initialCountry:"in",nationalMode:true,autoPlaceholder:"polite",utilsScript:"./js/utils.js"});window.iti=iti;
