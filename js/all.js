@@ -26,7 +26,30 @@ $(document).on("click", ".onclick-load", function() {
   }, 500);
 });
 
-$(document).on("click touch", ".info-icon", function(e) {
-  let term = $(this).data("tooltip");
-  alert(term);
+$(document).ready(function() {
+  $(window).on("resize", function(e) {
+    checkScreenSize();
+  });
+
+  checkScreenSize();
+
+  function checkScreenSize() {
+    var newWindowWidth = $(window).width();
+    if (newWindowWidth < 1112) {
+      $(document).on("click touch", ".info-icon", function() {
+        let term = $(this).data("tooltip");
+        $(".tooltip-modal").fadeIn();
+        $(".tooltip p").html(term);
+      });
+
+      $(document).on("click touch", ".close-tooltip", function() {
+        $(".tooltip-modal").hide();
+        $(".tooltip p").empty();
+      });
+    } else {
+      $(document).on("click", ".info-icon", function(e) {
+        e.preventDefault();
+      });
+    }
+  }
 });

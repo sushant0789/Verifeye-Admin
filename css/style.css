@@ -1179,7 +1179,7 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
 }
 
 /*** Modal Popup ***/
-.modal-wrap {
+.modal-wrap, .tooltip-modal {
   position: fixed;
   left: 0;
   right: 0;
@@ -1190,7 +1190,7 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   display: none;
 }
 
-.modal {
+.modal, .tooltip-modal .tooltip {
   height: 420px;
   max-width: 100%;
   width: 750px;
@@ -1217,11 +1217,11 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
           justify-content: center;
 }
 
-.modal i {
+.modal i, .tooltip-modal .tooltip i {
   margin: 0 0 15px;
 }
 
-.modal span {
+.modal span, .tooltip-modal .tooltip span {
   padding: 15px 0 0;
   font-weight: bold;
   font-size: 0.9rem;
@@ -1603,6 +1603,27 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
           justify-content: space-between;
 }
 
+.tooltip-modal .tooltip {
+  line-height: 1.5rem;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.tooltip-modal .tooltip h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0 0 15px;
+}
+
+.tooltip-modal .tooltip .close-tooltip {
+  cursor: pointer;
+  font-size: 120%;
+  color: #829194;
+  right: 15px;
+  position: absolute;
+  top: 0;
+}
+
 /*** Responsive for tablets ***/
 @media (min-width: 1025px) and (max-width: 1112px) {
   body {
@@ -1711,7 +1732,7 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
     width: 450px;
     padding: 0 20px 0 0;
   }
-  .modal {
+  .modal, .tooltip-modal .tooltip {
     width: 100%;
     max-width: 500px;
     height: auto;
@@ -1719,6 +1740,9 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
     -webkit-transform: translateX(-250px) translateY(-150px);
             transform: translateX(-250px) translateY(-150px);
     height: 300px;
+  }
+  .tooltip-modal .tooltip {
+    height: auto;
   }
 }
 
@@ -1876,7 +1900,7 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   .online-agent .agent-live-count label {
     padding: 0 0 5px;
   }
-  .modal {
+  .modal, .tooltip-modal .tooltip {
     width: 100%;
     max-width: 350px;
     height: auto;
@@ -1885,8 +1909,34 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
             transform: translateX(-175px) translateY(-100px);
     height: 200px;
   }
+  .tooltip-modal .tooltip {
+    height: auto;
+    top: 0;
+    -webkit-transform: translateX(-175px) translateY(30px);
+            transform: translateX(-175px) translateY(30px);
+  }
   .info-icon {
     z-index: 2;
+  }
+  .change-order {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .technical-check-flex {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    padding: 0 0 40px;
+  }
+  .min-height-div {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
   }
 }
 
@@ -1909,12 +1959,16 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   .language-label {
     padding: 0 5px 0 0;
   }
-  .modal {
+  .modal, .tooltip-modal .tooltip {
     width: auto;
     left: 15px;
     right: 15px;
     -webkit-transform: translateX(0) translateY(-100px);
             transform: translateX(0) translateY(-100px);
+  }
+  .tooltip-modal .tooltip {
+    -webkit-transform: translateX(0) translateY(30px);
+            transform: translateX(0) translateY(30px);
   }
 }
 /*# sourceMappingURL=style.css.map */
