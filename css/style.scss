@@ -1761,6 +1761,20 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   }
 }
 
+@media (min-width: 320px) and (max-width: 549px) {
+  .change-order .information-flex-wrap .information-passport {
+    &:nth-child(1) {
+      order: 2;
+    }
+    &:nth-child(2) {
+      order: 3;
+    }
+    &:nth-child(3) {
+      order: 1;
+    }
+  }
+}
+
 @media (min-width: 320px) and (max-width: 440px) {
   .otp-wrap .form-input {
     margin: 0 0 10px 0;
