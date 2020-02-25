@@ -1966,10 +1966,10 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
     -webkit-transform: translateX(-175px) translateY(30px);
             transform: translateX(-175px) translateY(30px);
   }
-  .info-icon {
+  .custom-checkbox .info-icon {
     z-index: 2;
   }
-  .info-icon:hover::before, .info-icon:hover::after, .info-icon:active::before, .info-icon:active::after, .info-icon:focus::before, .info-icon:focus::after {
+  .custom-checkbox .info-icon:hover::before, .custom-checkbox .info-icon:hover::after, .custom-checkbox .info-icon:active::before, .custom-checkbox .info-icon:active::after, .custom-checkbox .info-icon:focus::before, .custom-checkbox .info-icon:focus::after {
     display: none;
     visibility: hidden;
     opacity: 0;
