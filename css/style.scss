@@ -1245,9 +1245,13 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
     background-color: #e9e9e9;
   }
 }
+.change-order .information-flex-wrap .information-passport:nth-child(3) {
+  align-items: flex-end;
+  display: flex;
+}
 .online-agent {
-  align-self: flex-end;
-  margin: 0 0 50px 20px;
+  width: 90%;
+  margin: 0 0 50px 0;
   display: flex;
   flex-direction: row;
   border: 2px solid $agentColor;
@@ -1377,6 +1381,17 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   }
 }
 
+.change-order {
+  display: flex;
+  flex-direction: column;
+  .min-height-div {
+    min-height: auto;
+  }
+  .information-flex-wrap {
+    padding: 0 0 50px;
+  }
+}
+
 /*** Responsive for tablets ***/
 
 @media (min-width: 1025px) and (max-width: 1112px) {
@@ -1401,6 +1416,9 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
       }
     }
   }
+}
+.online-agent.show {
+  display: none;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -1493,6 +1511,13 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
     &.statement {
       width: 450px;
       padding: 0 20px 0 0;
+    }
+  }
+  .change-order .information-passport {
+    width: 230px;
+    padding: 0 20px 0 0;
+    .online-agent {
+      width: 100%;
     }
   }
   .modal {
@@ -1697,15 +1722,47 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   .change-order {
     display: flex;
     flex-direction: column;
-  }
-  .technical-check-flex {
-    order: 2;
-    padding: 0 0 40px;
-  }
-  .min-height-div {
-    order: 1;
+    .technical-check-flex {
+      order: 2;
+      padding: 0 0 40px;
+    }
+    .min-height-div {
+      order: 1;
+    }
   }
 }
+
+@media (min-width: 550px) and (max-width: 767px) {
+  .change-order {
+    .min-height-div {
+      flex-direction: column;
+    }
+    .information-flex-wrap {
+      flex-direction: row;
+      padding: 0 0 30px;
+      .information-passport:nth-child(2) {
+        padding-right: 0;
+        display: flex;
+        justify-content: flex-end;
+      }
+      .information-passport:nth-child(3) {
+        display: none;
+      }
+    }
+    .online-agent.show {
+      display: inline;
+      width: auto;
+    }
+    .info-image {
+      width: 220px;
+    }
+    .info-bg {
+      min-width: 220px;
+      min-height: 220px;
+    }
+  }
+}
+
 @media (min-width: 320px) and (max-width: 374px) {
   .head {
     padding: 0 0 25px;
