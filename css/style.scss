@@ -1388,6 +1388,19 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
     width: 100%;
     margin: auto;
   }
+  .info-icon {
+    z-index: 2;
+    &:hover,
+    &:active,
+    &:focus {
+      &::before,
+      &::after {
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+      }
+    }
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -1423,7 +1436,7 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
     .form-input {
       margin: 0 0 15px;
       padding: 10px;
-      width: 50px;
+      width: 45px;
     }
   }
   .input-button-selfie {
@@ -1492,6 +1505,19 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   }
   .tooltip-modal .tooltip {
     height: auto;
+  }
+  .info-icon {
+    z-index: 2;
+    &:hover,
+    &:active,
+    &:focus {
+      &::before,
+      &::after {
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+      }
+    }
   }
 }
 
@@ -1657,6 +1683,16 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   }
   .info-icon {
     z-index: 2;
+    &:hover,
+    &:active,
+    &:focus {
+      &::before,
+      &::after {
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+      }
+    }
   }
   .change-order {
     display: flex;
