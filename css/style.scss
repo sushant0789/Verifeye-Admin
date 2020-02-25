@@ -1403,7 +1403,7 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
     width: 100%;
     margin: auto;
   }
-  .info-icon {
+  .custom-checkbox .info-icon {
     z-index: 2;
     &:hover,
     &:active,
@@ -1531,7 +1531,7 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   .tooltip-modal .tooltip {
     height: auto;
   }
-  .info-icon {
+  .custom-checkbox .info-icon {
     z-index: 2;
     &:hover,
     &:active,
