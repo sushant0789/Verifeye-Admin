@@ -1617,8 +1617,6 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
     justify-content: space-between;
     .form-input {
       margin: 0 0 10px 0;
-      width: 38px;
-      padding: 10px 7px;
     }
   }
   .information-flex-wrap,
@@ -1763,6 +1761,13 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   }
 }
 
+@media (min-width: 320px) and (max-width: 440px) {
+  .otp-wrap .form-input {
+    margin: 0 0 10px 0;
+    width: 45px;
+  }
+}
+
 @media (min-width: 320px) and (max-width: 374px) {
   .head {
     padding: 0 0 25px;
@@ -1779,6 +1784,10 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   }
   .language-label {
     padding: 0 5px 0 0;
+  }
+  .otp-wrap .form-input {
+    width: 38px;
+    padding: 10px 7px;
   }
   .modal {
     width: auto;
