@@ -1593,6 +1593,10 @@ form fieldset {
     li:first-child span {
       left: 0;
     }
+    li.is-active span {
+      opacity: 1;
+    }
+    li.is-complete span,
     li:not(.is-active) span {
       opacity: 0;
     }

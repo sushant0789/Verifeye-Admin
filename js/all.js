@@ -32,7 +32,13 @@ function removeUpload() {
 $(document).on("click", ".onclick-load", function() {
   $(".modal-wrap").show();
   setTimeout(function() {
-    location.href = "finish.html";
+    $(this)
+      .closest("fieldset")
+      .removeClass("active");
+    $(this)
+      .closest("fieldset")
+      .next("fieldset")
+      .addClass("active");
   }, 500);
 });
 
@@ -47,7 +53,9 @@ $(document).on("click", ".input-button-next", function() {
   $(".progress-bar")
     .find("li.is-active")
     .next("li")
-    .addClass("is-active");
+    .addClass("is-active")
+    .prevAll("li.is-active")
+    .addClass("is-complete");
 });
 
 $(document).on("click", ".input-button-back", function() {
@@ -62,7 +70,35 @@ $(document).on("click", ".input-button-back", function() {
     .find("li:not(.is-active)")
     .prev("li.is-active")
     .removeClass("is-active");
+  $(".progress-bar")
+    .find("li:not(.is-active)")
+    .prev("li.is-active.is-complete")
+    .removeClass("is-complete");
 });
+
+$(document).on("click", ".input-button-back.finish", function() {
+  $(this)
+  .closest("fieldset")
+  .removeClass("active");
+$(this)
+  .closest("fieldset")
+  .prev("fieldset")
+  .addClass("active");
+$(".progress-bar li:last-child.is-active")
+  .removeClass("is-active is-complete").prev("li.is-active.is-complete")
+  .removeClass("is-complete");
+
+});
+
+$(document).on(
+  "click",
+  ".input-button-next.last",
+  function() {
+    $(this)
+    .closest("fieldset")
+    .addClass("active");
+
+  });
 
 $(document).ready(function() {
   $(window).on("resize", function(e) {
