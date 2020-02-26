@@ -37,11 +37,31 @@ $(document).on("click", ".onclick-load", function() {
 });
 
 $(document).on("click", ".input-button-next", function() {
-  console.log('hello');
-  debugger;
   $(this)
-    .parent("fieldset")
+    .closest("fieldset")
     .removeClass("active");
+  $(this)
+    .closest("fieldset")
+    .next("fieldset")
+    .addClass("active");
+  $(".progress-bar")
+    .find("li.is-active")
+    .next("li")
+    .addClass("is-active");
+});
+
+$(document).on("click", ".input-button-back", function() {
+  $(this)
+    .closest("fieldset")
+    .removeClass("active");
+  $(this)
+    .closest("fieldset")
+    .prev("fieldset")
+    .addClass("active");
+  $(".progress-bar")
+    .find("li:not(.is-active)")
+    .prev("li.is-active")
+    .removeClass("is-active");
 });
 
 $(document).ready(function() {

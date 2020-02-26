@@ -1399,7 +1399,8 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
 form fieldset {
   display: none;
   &.active {
-    display: inline;
+    display: inline-block;
+    width: 100%;
   }
 }
 
