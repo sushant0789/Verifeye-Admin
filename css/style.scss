@@ -468,7 +468,7 @@ $agentColor: #0093a8;
 body {
   font-family: "Montserrat", sans-serif;
   background-color: $bgColor;
-  padding: 120px 0 0;
+  padding: 0 0 60px 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: $primaryTextColor;
@@ -694,7 +694,7 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   margin: 0 0 1rem 0;
   max-width: 100%;
   width: 760px;
-  margin: 40px auto;
+  margin: 50px auto 30px;
 
   li {
     flex: 2;
@@ -824,14 +824,18 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   padding: 0 0 30px;
   display: flex;
   flex-direction: column;
+  [class*="form-label"] {
+    font-weight: bold;
+  }
+  .form-label-p {
+    color: $lightPrimary;
+    font-weight: normal;
+  }
 }
 [class*="form-label"] {
   font-size: 0.8rem;
   padding-bottom: 10px;
   color: $lightTextColor;
-}
-.form-label-p {
-  color: $lightPrimary;
 }
 .form-select-wrap {
   border: 1px solid $borderColor;
@@ -1435,6 +1439,7 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   }
   .progress-bar {
     max-width: 85%;
+    margin: 25px auto;
   }
   .width-50 {
     padding: 0 20px 0 0;
@@ -1568,8 +1573,15 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   .label.css-label {
     line-height: 1.4rem;
   }
+  [class*="form-label"] {
+    display: inline-block;
+  }
+  .supported-types {
+    font-size: 0.7rem;
+  }
   .progress-bar {
     max-width: 80%;
+    margin: 20px auto 15px;
     li:first-child span {
       left: 0;
     }
