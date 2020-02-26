@@ -29,19 +29,6 @@ function removeUpload() {
   $(".image-upload-wrap").show();
 }
 
-$(document).on("click", ".onclick-load", function() {
-  $(".modal-wrap").show();
-  setTimeout(function() {
-    $(this)
-      .closest("fieldset")
-      .removeClass("active");
-    $(this)
-      .closest("fieldset")
-      .next("fieldset")
-      .addClass("active");
-  }, 500);
-});
-
 $(document).on("click", ".input-button-next", function() {
   $(this)
     .closest("fieldset")
@@ -87,7 +74,13 @@ $(this)
 $(".progress-bar li:last-child.is-active")
   .removeClass("is-active is-complete").prev("li.is-active.is-complete")
   .removeClass("is-complete");
+});
 
+$(document).on("click", ".onclick-load", function(d) {
+  $(".modal-wrap").show();
+  setTimeout(function() {
+    $(".modal-wrap").hide();
+  }, 500);
 });
 
 $(document).on(
