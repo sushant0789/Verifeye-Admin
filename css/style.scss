@@ -1396,6 +1396,13 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   }
 }
 
+form fieldset {
+  display: none;
+  &.active {
+    display: inline;
+  }
+}
+
 /*** Responsive for tablets ***/
 
 @media (min-width: 1025px) and (max-width: 1112px) {

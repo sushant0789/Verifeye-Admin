@@ -1,3 +1,13 @@
+var input = document.querySelector("#phone");
+var iti = intlTelInput(input, {
+  initialCountry: "in",
+  nationalMode: true,
+  autoPlaceholder: "polite",
+  utilsScript:
+    "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/16.0.11/js/utils.js"
+});
+window.iti = iti;
+
 function readURL(input) {
   if (input.files && input.files[0]) {
     var reader = new FileReader();
@@ -24,6 +34,14 @@ $(document).on("click", ".onclick-load", function() {
   setTimeout(function() {
     location.href = "finish.html";
   }, 500);
+});
+
+$(document).on("click", ".input-button-next", function() {
+  console.log('hello');
+  debugger;
+  $(this)
+    .parent("fieldset")
+    .removeClass("active");
 });
 
 $(document).ready(function() {
