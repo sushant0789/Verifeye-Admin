@@ -76,10 +76,17 @@ $(".progress-bar li:last-child.is-active")
   .removeClass("is-complete");
 });
 
-$(document).on("click", ".onclick-load", function(d) {
+$(document).on("click", ".onclick-load", function() {
   $(".modal-wrap").show();
   setTimeout(function() {
     $(".modal-wrap").hide();
+  }, 500);
+});
+
+$(document).on("click", ".onclick-load2", function(d) {
+  $(".modal-wrap").show();
+  setTimeout(function() {
+    location.href = "finish.html";
   }, 500);
 });
 
