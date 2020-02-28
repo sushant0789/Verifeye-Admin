@@ -1522,8 +1522,8 @@ form fieldset {
     padding: 0 30px 0 0;
     width: 260px;
     &.statement {
-      width: 450px;
-      padding: 0 20px 0 0;
+      width: 430px;
+      padding: 0;
     }
   }
   .change-order .information-passport {
@@ -1748,7 +1748,9 @@ form fieldset {
       order: 2;
       padding: 0 0 40px;
     }
-    .technical-check{width: auto;}
+    .technical-check {
+      width: auto;
+    }
     .min-height-div {
       order: 1;
     }
