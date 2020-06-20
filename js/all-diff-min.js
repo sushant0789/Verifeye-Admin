@@ -64,7 +64,7 @@ $(document).on("click", ".input-button-next", function () {
   }),
   $(document).on("click", ".video-bg", function () {
     $(this).hide();
-    $("#video").show();
+    $("#video").css("display", "block");
   }),
   $(document).ready(function () {
     function i() {
