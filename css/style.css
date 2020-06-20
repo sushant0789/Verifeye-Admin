@@ -505,12 +505,6 @@ body {
   padding-bottom: 10px;
 }
 
-.title-h2.caps {
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 1.6rem;
-}
-
 .para {
   font-weight: 300;
   color: #5f6d70;
@@ -857,9 +851,10 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   -ms-flex-item-align: start;
       align-self: flex-start;
   text-align: left;
+  padding-top: 50px;
 }
 
-.camera-h3 {
+.camera-h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -869,9 +864,13 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  padding-bottom: 20px;
 }
 
-.camera-h3 i {
+.camera-h2 i {
   margin-right: 10px;
 }
 
