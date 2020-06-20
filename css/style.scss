@@ -813,10 +813,10 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
     padding: 0 40px;
     align-self: center;
     text-align: center;
-    &.camera-page {
-      align-self: flex-start;
-      text-align: left;
-    }
+  }
+  .width-50.camera-page {
+    align-self: flex-start;
+    text-align: left;
   }
 }
 .camera-h3 {
@@ -1757,6 +1757,19 @@ form fieldset {
   }
   .reference-h3 {
     padding: 0 0 15px;
+  }
+  .min-height-div .width-50.camera-page .reference-h3 {
+    padding: 15px 0;
+  }
+  #video,
+  .video-bg {
+    height: 270px;
+  }
+  .info-bg.doc-type-img img {
+    width: 100%;
+  }
+  .min-height-div .width-50.camera-page {
+    padding: 0;
   }
   .result-image {
     min-height: 79px;
