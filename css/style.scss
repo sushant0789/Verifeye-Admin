@@ -813,7 +813,40 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
     padding: 0 40px;
     align-self: center;
     text-align: center;
+    &.camera-page {
+      align-self: flex-start;
+      text-align: left;
+    }
   }
+}
+.camera-h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  i {
+    margin-right: 10px;
+  }
+}
+.check-div {
+  display: flex;
+  justify-content: center;
+  visibility: hidden;
+  &.first {
+    margin: 25px 0 0;
+  }
+}
+.camera-page-ul {
+  list-style: decimal;
+  padding: 0 0 0 15px;
+  li {
+    padding: 0 0 10px 10px;
+    line-height: 27px;
+    font-size: 0.9rem;
+  }
+}
+.camera-page-alert {
+  line-height: 27px;
+  color: $removeColor;
 }
 .width-50 {
   max-width: 100%;
@@ -1030,6 +1063,38 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
     max-height: 250px;
     max-width: 250px;
   }
+  &.doc-type-img {
+    padding: 25px 15px;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  &.doc-type-id-img {
+    padding: 15px;
+    flex-direction: column;
+    margin-bottom: 25px;
+    cursor: pointer;
+    h4 {
+      padding: 0 0 7px 0;
+    }
+  }
+  &.doc-type-img img {
+    max-height: 485px;
+    max-width: 400px;
+  }
+  &.doc-type-id-img img {
+    max-height: 200px;
+    max-width: 350px;
+  }
+}
+.which-doc {
+  color: $removeColor;
+  font-size: 1.4rem;
+  text-align: center;
+  width: 100%;
+  padding: 15px 0 0;
+}
+.padding-bottom-40 {
+  padding-bottom: 40px;
 }
 .image-name {
   display: flex;
@@ -1305,6 +1370,12 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   width: 24px;
   height: 31px;
   background-position: -2px -2px;
+}
+
+.sprite-camera-icon {
+  width: 29px;
+  height: 25px;
+  background-position: -35px -78px;
 }
 
 .sprite-check-audio {

@@ -21,8 +21,8 @@
   <body>
     <header>
       <ol class="progress-bar">
-        <li class="is-active"><span>Camera</span></li>
-        <li><span>Document Type</span></li>
+        <li class="is-complete"><span>Camera</span></li>
+        <li class="is-active"><span>Document Type</span></li>
         <li><span>Document</span></li>
         <li><span>Selfie</span></li>
         <li><span>Address</span></li>
@@ -47,38 +47,50 @@
             </select>
           </div>
         </div>
-        <h2 class="title-h2">Webcam Test</h2>
-        <div class="min-height-div">
+        <h2 class="title-h2">Document Type</h2>
+        <div class="min-height-div padding-bottom-40">
           <div class="width-50">
-            <h3 class="reference-h3 camera-h3">
-              <i class="sprite sprite-camera-icon"></i> The Test
+            <h3 class="reference-h3">
+              Passport
             </h3>
+            <div class="info-bg doc-type-img">
+              <img src="img/passport.png" alt="information-passport" />
+            </div>
+            <div class="check-div first">
+              <i class="sprite sprite-success-icon"></i>
+            </div>
           </div>
           <div class="width-50 camera-page">
             <h3 class="reference-h3">
-              Instructions
+              ID Card
             </h3>
-            <ol class="camera-page-ul">
-              <li>Click 'play' button.</li>
-              <li>
-                Click 'allow' if you see a question in the top of browser.This
-                will ask camera permission.
-              </li>
-              <li>
-                Now you should see yourself (or whatever your webcam is pointed
-                at!)
-              </li>
-            </ol>
-            <p class="camera-page-alert">
-              If you can see on your screen that means that it works correctly!
-            </p>
+            <div class="info-bg doc-type-id-img">
+              <h4>Front</h4>
+              <img src="img/front.png" alt="information-passport" />
+            </div>
+            <div class="info-bg doc-type-id-img">
+              <h4>Back</h4>
+              <img src="img/back.png" alt="information-passport" />
+            </div>
+            <div class="check-div">
+              <i class="sprite sprite-success-icon"></i>
+            </div>
           </div>
+          <h3 class="which-doc">
+            Which Document you have?
+          </h3>
         </div>
         <div class="bottom-nav">
           <input
             type="button"
+            onclick="location.href = 'index.html';"
+            value="Back"
+            class="input-button-back"
+          />
+          <input
+            type="button"
             value="Next"
-            onclick="location.href = 'document-type.html';"
+            onclick="location.href = 'document.html';"
             class="input-button-next"
           />
         </div>
