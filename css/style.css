@@ -1256,6 +1256,27 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   padding: 15px 0 0;
 }
 
+#video,
+.video-bg {
+  width: 100%;
+  height: 280px;
+  display: none;
+}
+
+.video-bg {
+  background-color: #222728;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
 .padding-bottom-40 {
   padding-bottom: 40px;
 }
@@ -1683,6 +1704,12 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   width: 35px;
   height: 36px;
   background-position: -73px -68px;
+}
+
+.sprite-play-icon {
+  width: 44px;
+  height: 44px;
+  background-position: -117px -65px;
 }
 
 .sprite-remove {

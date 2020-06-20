@@ -62,6 +62,10 @@ $(document).on("click", ".input-button-next", function () {
     $(".check-div").css("visibility", "hidden"),
       $(this).siblings(".check-div").css("visibility", "visible");
   }),
+  $(document).on("click", ".video-bg", function () {
+    $(this).hide();
+    $("#video").show();
+  }),
   $(document).ready(function () {
     function i() {
       $(window).width() < 1112
