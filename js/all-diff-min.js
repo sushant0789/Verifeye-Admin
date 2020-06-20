@@ -84,32 +84,19 @@ $(document).on("click", ".input-button-next", function () {
 
 ("use strict");
 
-const video = document.getElementById("video");
-const errorMsgElement = document.querySelector("span#errorMsg");
+// Grab elements, create settings, etc.
+var video = document.getElementById("video");
 
-const constraints = {
-  audio: true,
-  video: {
-    width: 1280,
-    height: 720,
-  },
-};
-
-// Access webcam
-async function init() {
-  try {
-    const stream = await navigator.mediaDevices.getUserMedia(constraints);
-    handleSuccess(stream);
-  } catch (e) {
-    errorMsgElement.innerHTML = `navigator.getUserMedia error:${e.toString()}`;
+// Get access to the camera!
+function playVideo() {
+  if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+    // Not adding `{ audio: true }` since we only want video now
+    navigator.mediaDevices
+      .getUserMedia({ video: true })
+      .then(function (stream) {
+        //video.src = window.URL.createObjectURL(stream);
+        video.srcObject = stream;
+        video.play();
+      });
   }
 }
-
-// Success
-function handleSuccess(stream) {
-  window.stream = stream;
-  video.srcObject = stream;
-}
-
-// Load init
-init();
