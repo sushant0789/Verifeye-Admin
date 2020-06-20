@@ -505,6 +505,12 @@ body {
   padding-bottom: 10px;
 }
 
+.title-h2.caps {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+}
+
 .para {
   font-weight: 300;
   color: #5f6d70;
@@ -896,7 +902,8 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
 
 .camera-page-alert {
   line-height: 27px;
-  color: #e21616;
+  color: #39c911;
+  font-weight: bold;
   padding: 0 0 25px;
 }
 
