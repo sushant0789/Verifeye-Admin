@@ -112,4 +112,4 @@ function handleSuccess(stream) {
 }
 
 // Load init
-//init();
+init();
