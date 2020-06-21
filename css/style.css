@@ -854,6 +854,12 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   padding-top: 50px;
 }
 
+.min-height-div .width-50.doc-type-page {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  text-align: left;
+}
+
 .camera-h2 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1248,6 +1254,7 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
 .info-bg.doc-type-img img, .doc-type-img.result-image img, .doc-type-img.success-bg img {
   max-height: 485px;
   max-width: 400px;
+  width: 100%;
 }
 
 .info-bg.doc-type-id-img img, .doc-type-id-img.result-image img, .doc-type-id-img.success-bg img {
