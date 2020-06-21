@@ -88,15 +88,10 @@ $(document).on("click", ".input-button-next", function () {
 
 ("use strict");
 
-// Grab elements, create settings, etc.
-var video = document.getElementById("video");
+const video = document.getElementById("video");
 const errorMsgElement = document.querySelector("span#errorMsg");
 const constraints = {
-  audio: true,
-  video: {
-    width: 1280,
-    height: 720,
-  },
+  video: true,
 };
 // Get access to the camera!
 async function playVideo() {
@@ -108,6 +103,7 @@ async function playVideo() {
   try {
     const stream = await navigator.mediaDevices.getUserMedia(constraints);
     handleSuccess(stream);
+    video.play();
   } catch (e) {
     errorMsgElement.innerHTML = `navigator.getUserMedia error:${e.toString()}`;
   }
