@@ -90,14 +90,10 @@ $(document).on("click", ".input-button-next", function () {
 
 const video = document.getElementById("video");
 
-const constraints = {
-  video: true,
-};
-
 // Get access to the camera!
 async function playVideo() {
   try {
-    const stream = await navigator.mediaDevices.getUserMedia(constraints);
+    const stream = await navigator.mediaDevices.getUserMedia({ video: true });
     handleSuccess(stream);
     video.play();
   } catch (e) {
