@@ -1568,6 +1568,13 @@ form fieldset {
       width: 375px;
     }
   }
+  .min-height-div .width-50:nth-child(2) .info-bg.doc-type-id-img img {
+    max-height: 152px;
+    width: auto;
+  }
+  .info-bg.doc-type-img img {
+    max-height: 390px;
+  }
   .min-height-div .width-50.camera-page {
     padding-top: 50px;
   }
