@@ -103,6 +103,8 @@ async function playVideo() {
   } catch (e) {
     $("#successMsg").hide();
     $("#errorMsg").show();
+    $("#video").hide();
+    $(".video-bg").show();
   }
 }
 
