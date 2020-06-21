@@ -89,7 +89,7 @@ $(document).on("click", ".input-button-next", function () {
 ("use strict");
 
 const video = document.getElementById("video");
-const errorMsgElement = document.querySelector("span#errorMsg");
+//const errorMsgElement = document.querySelector("p#errorMsg");
 const constraints = {
   video: true,
 };
@@ -104,8 +104,11 @@ async function playVideo() {
     const stream = await navigator.mediaDevices.getUserMedia(constraints);
     handleSuccess(stream);
     video.play();
+    $("#successMsg").show();
+    $("#errorMsg").hide();
   } catch (e) {
-    errorMsgElement.innerHTML = `navigator.getUserMedia error:${e.toString()}`;
+    $("#successMsg").hide();
+    $("#errorMsg").show();
   }
 }
 

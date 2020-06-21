@@ -853,11 +853,18 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
     font-size: 0.9rem;
   }
 }
-.camera-page-alert {
+#successMsg,
+#errorMsg {
   line-height: 27px;
-  color: $successColor;
   font-weight: bold;
   padding: 0 0 25px;
+}
+#successMsg {
+  color: $successColor;
+}
+#errorMsg {
+  color: $removeColor;
+  display: none;
 }
 .width-50 {
   max-width: 100%;

@@ -905,11 +905,20 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   font-size: 0.9rem;
 }
 
-.camera-page-alert {
+#successMsg,
+#errorMsg {
   line-height: 27px;
-  color: #39c911;
   font-weight: bold;
   padding: 0 0 25px;
+}
+
+#successMsg {
+  color: #39c911;
+}
+
+#errorMsg {
+  color: #e21616;
+  display: none;
 }
 
 .width-50 {
