@@ -58,10 +58,6 @@ $(document).on("click", ".input-button-next", function () {
   $(document).on("click", ".input-button-next.last", function () {
     $(this).closest("fieldset").addClass("active");
   }),
-  $(document).on("click", ".doc-type-img, .doc-type-id-img", function () {
-    $(".check-div").css("visibility", "hidden"),
-      $(this).siblings(".check-div").css("visibility", "visible");
-  }),
   $(document).on("click", ".video-bg", function () {
     $(this).hide();
     $("#video").show();

@@ -47,8 +47,24 @@
             </select>
           </div>
         </div>
-        <h2 class="title-h2">Document Type</h2>
-        <div class="min-height-div padding-bottom-40">
+        <h2 class="title-h2">Document type - Passport or National ID card</h2>
+        <div class="doc-info">
+          <ul>
+            <li>
+              <i class="sprite sprite-crop-icon"></i> Document should not be
+              cropped.
+            </li>
+            <li>
+              <i class="sprite sprite-visible-icon"></i> Document should be
+              fully visible.
+            </li>
+            <li>
+              <i class="sprite sprite-blur-icon"></i> Document should not be
+              blurred.
+            </li>
+          </ul>
+        </div>
+        <div class="min-height-div">
           <div class="width-50">
             <h3 class="reference-h3">
               Passport
@@ -57,7 +73,10 @@
               <img src="img/passport.png" alt="information-passport" />
             </div>
             <div class="check-div first">
-              <i class="sprite sprite-success-icon"></i>
+              <p class="error-Msg">
+                For passport: Please have your passport open and ready and make
+                sure that the document has not expired.
+              </p>
             </div>
           </div>
           <div class="width-50 doc-type-page">
@@ -73,12 +92,12 @@
               <img src="img/back.png" alt="information-passport" />
             </div>
             <div class="check-div">
-              <i class="sprite sprite-success-icon"></i>
+              <p class="error-Msg">
+                For National ID: Please have your national ID ready and make
+                sure that the document has not expired.
+              </p>
             </div>
           </div>
-          <h3 class="which-doc">
-            Which Document you have?
-          </h3>
         </div>
         <div class="bottom-nav">
           <input

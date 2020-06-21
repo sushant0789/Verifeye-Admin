@@ -860,6 +860,25 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   text-align: left;
 }
 
+.doc-info {
+  padding: 10px 0;
+}
+
+.doc-info ul li {
+  padding: 10px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bold;
+}
+
+.doc-info ul li i {
+  margin: 0 12px 0 0;
+}
+
 .camera-h2 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -887,7 +906,6 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  visibility: hidden;
 }
 
 .check-div.first {
@@ -905,8 +923,8 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   font-size: 0.9rem;
 }
 
-#successMsg,
-#errorMsg {
+.success-Msg,
+.error-Msg {
   line-height: 27px;
   font-weight: bold;
   padding: 0 0 25px;
@@ -919,6 +937,10 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
 #errorMsg {
   color: #e21616;
   display: none;
+}
+
+.error-Msg {
+  color: #e21616;
 }
 
 .width-50 {
@@ -1243,7 +1265,6 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  cursor: pointer;
 }
 
 .info-bg.doc-type-id-img, .doc-type-id-img.result-image, .doc-type-id-img.success-bg {
@@ -1253,7 +1274,8 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-bottom: 25px;
-  cursor: pointer;
+  min-height: auto;
+  min-width: auto;
 }
 
 .info-bg.doc-type-id-img h4, .doc-type-id-img.result-image h4, .doc-type-id-img.success-bg h4 {
@@ -1261,13 +1283,12 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
 }
 
 .info-bg.doc-type-img img, .doc-type-img.result-image img, .doc-type-img.success-bg img {
-  max-height: 485px;
+  max-height: 420px;
   max-width: 400px;
-  width: 100%;
 }
 
 .info-bg.doc-type-id-img img, .doc-type-id-img.result-image img, .doc-type-id-img.success-bg img {
-  max-height: 200px;
+  max-height: 167px;
   max-width: 350px;
 }
 
@@ -1298,10 +1319,6 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
-}
-
-.padding-bottom-40 {
-  padding-bottom: 40px;
 }
 
 .image-name {
@@ -1699,10 +1716,22 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   background-position: -2px -2px;
 }
 
+.sprite-blur-icon {
+  width: 28px;
+  height: 28px;
+  background-position: -74px -109px;
+}
+
 .sprite-camera-icon {
   width: 29px;
   height: 25px;
   background-position: -35px -78px;
+}
+
+.sprite-crop-icon {
+  width: 28px;
+  height: 28px;
+  background-position: -2px -109px;
 }
 
 .sprite-check-audio {
@@ -1757,6 +1786,12 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   width: 61px;
   height: 61px;
   background-position: -100px -2px;
+}
+
+.sprite-visible-icon {
+  width: 28px;
+  height: 28px;
+  background-position: -36px -109px;
 }
 
 /*** Bottom Navigation Buttons ***/
@@ -1856,6 +1891,9 @@ form fieldset.active {
   .progress-bar {
     max-width: 85%;
     margin: 25px auto;
+  }
+  .progress-bar li {
+    font-size: 0.8rem;
   }
   .width-50 {
     padding: 0 20px 0 0;
@@ -2036,6 +2074,9 @@ form fieldset.active {
   .min-height-div .width-50:nth-child(2) img {
     max-width: 100%;
     width: 375px;
+  }
+  .min-height-div .width-50:nth-child(2) .info-bg.doc-type-id-img img, .min-height-div .width-50:nth-child(2) .doc-type-id-img.result-image img, .min-height-div .width-50:nth-child(2) .doc-type-id-img.success-bg img {
+    width: auto;
   }
   .input-button-selfie {
     width: 60%;

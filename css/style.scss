@@ -824,6 +824,18 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
     text-align: left;
   }
 }
+.doc-info {
+  padding: 10px 0;
+  ul li {
+    padding: 10px 0 0;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    i {
+      margin: 0 12px 0 0;
+    }
+  }
+}
 .camera-h2 {
   display: flex;
   align-items: center;
@@ -839,7 +851,6 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
 .check-div {
   display: flex;
   justify-content: center;
-  visibility: hidden;
   &.first {
     margin: 25px 0 0;
   }
@@ -853,8 +864,8 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
     font-size: 0.9rem;
   }
 }
-#successMsg,
-#errorMsg {
+.success-Msg,
+.error-Msg {
   line-height: 27px;
   font-weight: bold;
   padding: 0 0 25px;
@@ -865,6 +876,9 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
 #errorMsg {
   color: $removeColor;
   display: none;
+}
+.error-Msg {
+  color: $removeColor;
 }
 .width-50 {
   max-width: 100%;
@@ -1084,24 +1098,23 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   &.doc-type-img {
     padding: 25px 15px;
     flex-direction: column;
-    cursor: pointer;
   }
   &.doc-type-id-img {
     padding: 15px;
     flex-direction: column;
     margin-bottom: 25px;
-    cursor: pointer;
+    min-height: auto;
+    min-width: auto;
     h4 {
       padding: 0 0 7px 0;
     }
   }
   &.doc-type-img img {
-    max-height: 485px;
+    max-height: 420px;
     max-width: 400px;
-    width: 100%;
   }
   &.doc-type-id-img img {
-    max-height: 200px;
+    max-height: 167px;
     max-width: 350px;
   }
 }
@@ -1124,9 +1137,6 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-}
-.padding-bottom-40 {
-  padding-bottom: 40px;
 }
 .image-name {
   display: flex;
@@ -1404,10 +1414,22 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   background-position: -2px -2px;
 }
 
+.sprite-blur-icon {
+  width: 28px;
+  height: 28px;
+  background-position: -74px -109px;
+}
+
 .sprite-camera-icon {
   width: 29px;
   height: 25px;
   background-position: -35px -78px;
+}
+
+.sprite-crop-icon {
+  width: 28px;
+  height: 28px;
+  background-position: -2px -109px;
 }
 
 .sprite-check-audio {
@@ -1462,6 +1484,11 @@ input[type="checkbox"].css-checkbox:checked + label.css-label:after {
   width: 61px;
   height: 61px;
   background-position: -100px -2px;
+}
+.sprite-visible-icon {
+  width: 28px;
+  height: 28px;
+  background-position: -36px -109px;
 }
 
 /*** Bottom Navigation Buttons ***/
@@ -1557,6 +1584,9 @@ form fieldset {
   .progress-bar {
     max-width: 85%;
     margin: 25px auto;
+  }
+  .progress-bar li {
+    font-size: 0.8rem;
   }
   .width-50 {
     padding: 0 20px 0 0;
@@ -1738,6 +1768,9 @@ form fieldset {
       max-width: 100%;
       width: 375px;
     }
+  }
+  .min-height-div .width-50:nth-child(2) .info-bg.doc-type-id-img img {
+    width: auto;
   }
   .input-button-selfie {
     width: 60%;
