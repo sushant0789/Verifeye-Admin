@@ -106,7 +106,7 @@ async function playVideo() {
   // });
 
   try {
-    const stream = await navigator.mediaDevices.getUserMedia(video);
+    const stream = await navigator.mediaDevices.getUserMedia(constraints);
     handleSuccess(stream);
   } catch (e) {
     errorMsgElement.innerHTML = `navigator.getUserMedia error:${e.toString()}`;
