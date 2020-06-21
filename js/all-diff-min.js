@@ -89,23 +89,17 @@ $(document).on("click", ".input-button-next", function () {
 ("use strict");
 
 const video = document.getElementById("video");
-//const errorMsgElement = document.querySelector("p#errorMsg");
+
 const constraints = {
   video: true,
 };
+
 // Get access to the camera!
 async function playVideo() {
-  // navigator.mediaDevices.getUserMedia({ video: true }).then(function (stream) {
-  //   video.srcObject = stream;
-  //   video.play();
-  // });
-
   try {
     const stream = await navigator.mediaDevices.getUserMedia(constraints);
     handleSuccess(stream);
     video.play();
-    $("#successMsg").show();
-    $("#errorMsg").hide();
   } catch (e) {
     $("#successMsg").hide();
     $("#errorMsg").show();
