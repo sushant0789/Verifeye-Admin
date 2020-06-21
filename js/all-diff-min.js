@@ -100,15 +100,13 @@ async function playVideo() {
   // });
 
   try {
-    const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-    handleSuccess(stream);
+    navigator.mediaDevices
+      .getUserMedia({ video: true })
+      .then(function (stream) {
+        video.srcObject = stream;
+        video.play();
+      });
   } catch (e) {
     errorMsgElement.innerHTML = `navigator.getUserMedia error:${e.toString()}`;
   }
-}
-
-// Success
-function handleSuccess(stream) {
-  window.stream = stream;
-  video.srcObject = stream;
 }
