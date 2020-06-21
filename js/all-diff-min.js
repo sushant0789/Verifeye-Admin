@@ -91,7 +91,13 @@ $(document).on("click", ".input-button-next", function () {
 // Grab elements, create settings, etc.
 var video = document.getElementById("video");
 const errorMsgElement = document.querySelector("span#errorMsg");
-
+const constraints = {
+  audio: true,
+  video: {
+    width: 1280,
+    height: 720,
+  },
+};
 // Get access to the camera!
 async function playVideo() {
   // navigator.mediaDevices.getUserMedia({ video: true }).then(function (stream) {
@@ -100,13 +106,15 @@ async function playVideo() {
   // });
 
   try {
-    navigator.mediaDevices
-      .getUserMedia({ video: true })
-      .then(function (stream) {
-        video.srcObject = stream;
-        video.play();
-      });
+    const stream = await navigator.mediaDevices.getUserMedia(video);
+    handleSuccess(stream);
   } catch (e) {
     errorMsgElement.innerHTML = `navigator.getUserMedia error:${e.toString()}`;
   }
+}
+
+// Success
+function handleSuccess(stream) {
+  window.stream = stream;
+  video.srcObject = stream;
 }
